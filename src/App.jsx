@@ -1,6 +1,10 @@
 import './App.css'
 import WeatherForecast from './components/WeatherForecast';
 
+// level up:
+// import WeatherIcon from './components/WeatherIcon';
+// import WeatherData from './components/WeatherData';
+
 const App = () => {
 
   const weatherForecasts = [
@@ -45,16 +49,43 @@ const App = () => {
     <>
       <h1>Local Weather</h1>
       <section>
-      {weatherForecasts.map((weatherForecast, index) => {
-      return <WeatherForecast
-        key={index} 
-        day={weatherForecast.day}
-        img={weatherForecast.img}
-        imgAlt={weatherForecast.imgAlt}
-        conditions={weatherForecast.conditions}
-        time={weatherForecast.time}
-      />
-    })}
+        {weatherForecasts.map((weatherForecast, index) => {
+          return <WeatherForecast
+            key={index}
+            day={weatherForecast.day}
+            img={weatherForecast.img}
+            imgAlt={weatherForecast.imgAlt}
+            conditions={weatherForecast.conditions}
+            time={weatherForecast.time}
+          />
+
+
+    //level up:
+
+          // <>
+          //   <h1>Weather Icon</h1>
+          //   <section>
+          //     {weatherForecasts.map((weatherForecast, index) => {
+          //       return <WeatherIcon
+          //         key={index}
+          //         img={weatherForecast.img}
+          //         imgAlt={weatherForecast.imgAlt}
+          //       />
+
+
+          // <>
+          //   <h1>Weather Data</h1>
+          //   <section>
+          //     {weatherForecasts.map((weatherForecast, index) => {
+          //       return <WeatherData
+          //         key={index}
+          //         day={weatherForecast.day}
+          //         conditions={weatherForecast.conditions}
+          //         time={weatherForecast.time}
+          //       />
+
+
+        })}
       </section>
     </>
 
